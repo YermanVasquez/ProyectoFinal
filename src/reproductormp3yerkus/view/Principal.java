@@ -66,15 +66,15 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         panelPie = new javax.swing.JPanel();
         BotónAtras = new javax.swing.JButton();
-        BotónPlay = new javax.swing.JButton();
+        botónPlay = new javax.swing.JButton();
         BotónAgregar = new javax.swing.JButton();
         BotónEliminar = new javax.swing.JButton();
         sliderVolumen = new javax.swing.JSlider();
-        labelmás = new javax.swing.JLabel();
-        labelMenos = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         BotónSalir = new javax.swing.JButton();
         BotónAdelantar = new javax.swing.JButton();
-        botónVolumen = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         botónStop = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         listaDeCanciones = new javax.swing.JList<>();
@@ -180,29 +180,28 @@ public class Principal extends javax.swing.JFrame {
         });
         panelPie.add(BotónAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 60));
 
-        BotónPlay.setBackground(new java.awt.Color(14, 15, 14));
-        BotónPlay.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        BotónPlay.setForeground(new java.awt.Color(255, 255, 255));
-        BotónPlay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono/play1.jpg"))); // NOI18N
-        BotónPlay.setToolTipText("Play y Pausa");
-        BotónPlay.setBorder(null);
-        BotónPlay.setFocusPainted(false);
-        BotónPlay.setFocusable(false);
-        BotónPlay.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/icono/play2.jpg"))); // NOI18N
-        BotónPlay.addMouseListener(new java.awt.event.MouseAdapter() {
+        botónPlay.setBackground(new java.awt.Color(14, 15, 14));
+        botónPlay.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        botónPlay.setForeground(new java.awt.Color(255, 255, 255));
+        botónPlay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono/play1.jpg"))); // NOI18N
+        botónPlay.setToolTipText("Play y Pausa");
+        botónPlay.setBorder(null);
+        botónPlay.setFocusPainted(false);
+        botónPlay.setFocusable(false);
+        botónPlay.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BotónPlayMouseEntered(evt);
+                botónPlayMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BotónPlayMouseExited(evt);
+                botónPlayMouseExited(evt);
             }
         });
-        BotónPlay.addActionListener(new java.awt.event.ActionListener() {
+        botónPlay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotónPlayActionPerformed(evt);
+                botónPlayActionPerformed(evt);
             }
         });
-        panelPie.add(BotónPlay, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 60, 60));
+        panelPie.add(botónPlay, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 60, 60));
 
         BotónAgregar.setBackground(new java.awt.Color(14, 15, 14));
         BotónAgregar.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -267,18 +266,18 @@ public class Principal extends javax.swing.JFrame {
         });
         panelPie.add(sliderVolumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, -1, 41));
 
-        labelmás.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        labelmás.setForeground(new java.awt.Color(0, 204, 249));
-        labelmás.setText("+");
-        labelmás.setToolTipText("Subir Volumen");
-        panelPie.add(labelmás, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 10, 60));
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 204, 249));
+        jLabel3.setText("+");
+        jLabel3.setToolTipText("Subir Volumen");
+        panelPie.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 10, 60));
 
-        labelMenos.setBackground(new java.awt.Color(255, 255, 255));
-        labelMenos.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        labelMenos.setForeground(new java.awt.Color(0, 204, 249));
-        labelMenos.setText("-");
-        labelMenos.setToolTipText("Bajar volumen");
-        panelPie.add(labelMenos, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, 10, 60));
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 249));
+        jLabel4.setText("-");
+        jLabel4.setToolTipText("Bajar volumen");
+        panelPie.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, 10, 60));
 
         BotónSalir.setBackground(new java.awt.Color(14, 15, 14));
         BotónSalir.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -328,17 +327,17 @@ public class Principal extends javax.swing.JFrame {
         });
         panelPie.add(BotónAdelantar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 50, 60));
 
-        botónVolumen.setBackground(new java.awt.Color(14, 15, 14));
-        botónVolumen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono/sonido.png"))); // NOI18N
-        botónVolumen.setBorderPainted(false);
-        botónVolumen.setFocusPainted(false);
-        botónVolumen.setFocusable(false);
-        botónVolumen.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBackground(new java.awt.Color(14, 15, 14));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono/sonido.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setFocusPainted(false);
+        jButton1.setFocusable(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botónVolumenActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        panelPie.add(botónVolumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 40, 40));
+        panelPie.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 40, 40));
 
         botónStop.setBackground(new java.awt.Color(14, 15, 14));
         botónStop.setForeground(new java.awt.Color(14, 15, 14));
@@ -390,7 +389,7 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addGap(81, 81, 81))
                     .addGroup(panelIntermedioLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1)
                         .addContainerGap())))
             .addComponent(panelEncabezado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -482,39 +481,50 @@ this.sliderVolumen.setPaintLabels(rootPaneCheckingEnabled);
     private void BotónAtrasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotónAtrasMouseEntered
     
     }//GEN-LAST:event_BotónAtrasMouseEntered
-    private void BotónPlayMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotónPlayMouseEntered
+    private void botónPlayMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botónPlayMouseEntered
      
-    }//GEN-LAST:event_BotónPlayMouseEntered
-    private void BotónPlayMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotónPlayMouseExited
+    }//GEN-LAST:event_botónPlayMouseEntered
+    private void botónPlayMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botónPlayMouseExited
      
-    }//GEN-LAST:event_BotónPlayMouseExited
+    }//GEN-LAST:event_botónPlayMouseExited
     private void BotónAdelantarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotónAdelantarMouseEntered
 
     }//GEN-LAST:event_BotónAdelantarMouseEntered
     private void BotónAdelantarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotónAdelantarMouseExited
    
     }//GEN-LAST:event_BotónAdelantarMouseExited
-    private void botónVolumenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botónVolumenActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
-    }//GEN-LAST:event_botónVolumenActionPerformed
-    private void BotónPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotónPlayActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
+    private void botónPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botónPlayActionPerformed
 //Imagen
 String canciones= listaDeCanciones.getSelectedValue();
- try {
+   
+if(botónPlay.isSelected()){  
+  imagenApagando();
+ // botónPlay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/play2.jpg/")));
+  try {
+            play.open(new File(canciones));
+            play.pause();
+        } catch (BasicPlayerException ex) {
+            java.util.logging.Logger.getLogger(Principal.class.getName()).
+                    log(java.util.logging.Level.SEVERE, null, ex);
+        } 
+}else{
+    imagenEncendido();
+  //  botónPlay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/play1.jpg/")));
+        try {
             play.open(new File(canciones));
             play.play();
         } catch (BasicPlayerException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).
                     log(java.util.logging.Level.SEVERE, null, ex);
-        }   
-if(BotónPlay.isSelected()){  
-  imagenApagando();
-}else{
-    imagenEncendido();
-    //play.open(canciones);
-}      
+        } 
+    
+    
+}     
    
-    }//GEN-LAST:event_BotónPlayActionPerformed
+    }//GEN-LAST:event_botónPlayActionPerformed
 
     private void BotónEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotónEliminarActionPerformed
        int eliminar = listaDeCanciones.getSelectedIndex();
@@ -591,16 +601,18 @@ if(listaDeCanciones.getSelectedIndex()!= modelo.size()-1){
     private javax.swing.JButton BotónAgregar;
     private javax.swing.JButton BotónAtras;
     private javax.swing.JButton BotónEliminar;
-    private javax.swing.JButton BotónPlay;
     private javax.swing.JButton BotónSalir;
+    private javax.swing.JButton botónPlay;
     private javax.swing.JButton botónStop;
-    private javax.swing.JButton botónVolumen;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton5;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -611,8 +623,6 @@ if(listaDeCanciones.getSelectedIndex()!= modelo.size()-1){
     private javax.swing.JSlider jSlider2;
     private javax.swing.JTree jTree1;
     private javax.swing.JLabel labelImagen;
-    private javax.swing.JLabel labelMenos;
-    private javax.swing.JLabel labelmás;
     private javax.swing.JList<String> listaDeCanciones;
     private javax.swing.JPanel panelEncabezado;
     private javax.swing.JPanel panelIntermedio;
