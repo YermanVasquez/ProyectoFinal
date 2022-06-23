@@ -23,16 +23,12 @@ public class Principal extends javax.swing.JFrame {
     private BasicPlayer play = new BasicPlayer();
     private int xMouse;
     private int yMouse;
-    
     //int cont=0; // creo el contador *Pense agregarle un contador pero el jlisten traer esos metos*
     public Principal() {//constructor
         initComponents();
         listaDeCanciones.setModel(modelo);
         this.setLocationRelativeTo(null);// Para centar la interfaz 
-        imagenApagando();//Para inicializar la imagen
-        
-     
-        
+        imagenApagando();//Para inicializar la imagen      
     }
     
     public void imagenApagando(){ // metodo de apagado
@@ -430,10 +426,10 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotónAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotónAgregarActionPerformed
-       
-        Carpeta Abrir = new Carpeta(this); 
-        Abrir.setVisible(true);
+        Carpeta abrir = new Carpeta(this); 
+        abrir.setVisible(true);
         this.hide();     
+
     }//GEN-LAST:event_BotónAgregarActionPerformed
 
     private void sliderVolumenMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sliderVolumenMousePressed
@@ -441,20 +437,14 @@ this.sliderVolumen.setPaintLabels(rootPaneCheckingEnabled);
     }//GEN-LAST:event_sliderVolumenMousePressed
 
     private void BotónAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotónAtrasActionPerformed
-       
         if(listaDeCanciones.getSelectedIndex()!=0){
-            if(play.getStatus() == BasicPlayer.PLAYING){
-        
-           
-           
-               
+            if(play.getStatus() == BasicPlayer.PLAYING){   
                try {
                play.stop();
            } catch (BasicPlayerException ex) {
                java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
            }
        }
-       
         try {
             play.open(new File((modelo.elementAt((listaDeCanciones.getSelectedIndex())-1)).toString()));
             play.play();
@@ -463,16 +453,7 @@ this.sliderVolumen.setPaintLabels(rootPaneCheckingEnabled);
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         
            }
-        }
-        
-           
-        
-        
-        
-        
-               
-        
-                         
+        }                 
     }//GEN-LAST:event_BotónAtrasActionPerformed
     private void BotónEliminarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotónEliminarMousePressed
 
@@ -525,14 +506,12 @@ String canciones= listaDeCanciones.getSelectedValue();
         } catch (BasicPlayerException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).
                     log(java.util.logging.Level.SEVERE, null, ex);
-        }
-       
+        }   
 if(BotónPlay.isSelected()){  
   imagenApagando();
 }else{
     imagenEncendido();
     //play.open(canciones);
-    
 }      
    
     }//GEN-LAST:event_BotónPlayActionPerformed

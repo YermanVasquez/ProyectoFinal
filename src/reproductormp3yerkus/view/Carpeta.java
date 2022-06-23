@@ -8,6 +8,7 @@
 package reproductormp3yerkus.view;
 
 import java.io.File;
+import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Carpeta extends javax.swing.JFrame {
@@ -15,11 +16,11 @@ public class Carpeta extends javax.swing.JFrame {
  Carpeta(Principal principal) {
      this.principal = principal;
         initComponents();
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter(".mp3","mp3");
+        fileChooserCarpetaDeMusicas.setFileFilter(filtro);
+        
         setLocationRelativeTo(null); // para centrar el JFrame
-    }
-
-    
-    
+ }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -63,17 +64,15 @@ public class Carpeta extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fileChooserCarpetaDeMusicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileChooserCarpetaDeMusicasActionPerformed
-        FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.mp3","mp3");
         
         File archivo = fileChooserCarpetaDeMusicas.getSelectedFile(); 
-        //File archivo = fileChooserCarpetaDeMusicas.; 
         principal.modelo.addElement(archivo.toString());
         principal.show();
         this.hide();
     }//GEN-LAST:event_fileChooserCarpetaDeMusicasActionPerformed
 
     private void fileChooserCarpetaDeMusicasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileChooserCarpetaDeMusicasMouseClicked
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_fileChooserCarpetaDeMusicasMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
